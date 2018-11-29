@@ -2,3 +2,4 @@ data/
 src/.ipynb_checkpoints/
 fasttextmodels/
 src/__pycache__/
+word2vecmodels/
