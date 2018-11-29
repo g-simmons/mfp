@@ -1,2 +1,4 @@
 data/
 src/.ipynb_checkpoints/
+fasttextmodels/
+src/__pycache__/

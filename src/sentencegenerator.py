@@ -4,4 +4,4 @@ class SentenceGenerator(object):
  
     def __iter__(self):
             for line in open(self.fname,encoding='utf-8'):
-                yield line.split()
+                yield line.lower().split()
