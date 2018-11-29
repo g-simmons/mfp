@@ -1,0 +1,56 @@
+SUBSET:
+
+Consolidation: Average
+
+svc: 67%
+XGB: 74%
+
+
+Consolidation: Sum
+
+SVC: 62%
+XGB: 72%
+
+
+food avg, meal sum, diary sum (mixed_1) **
+
+SVC: 70%
+XGB: 76%
+
+food avg, meal avg, diary sum (mixed_2) 
+
+SVC: 60%
+XGB: 76%
+
+food avg, meal sum, diary avg (mixed_3)
+
+SVC: 64%
+XGB: 71%
+
+food sum, meal sum, diary avg (mixed_4)
+
+SVC: 62%
+XGB: 70%
+
+
+Full set, using mixed 1 configuration
+
+{'fit_time': array([ 289.33254886,  455.60975838,  545.43434739]),
+ 'score_time': array([ 0.79304528,  0.63860965,  0.59280109]),
+ 'test_score': array([ 0.79799427,  0.78223496,  0.78330946]),
+ 'train_score': array([ 0.79996418,  0.80103868,  0.79853152])}
+
+create food vectors by averaging word vectors
+create meal vectors by summing food vectors
+create day vectors by summing meal vectors
+
+Make a table of vectors for each day with labels
+Discard days with less than 1200 or more than 5000 calories
+Discard on_target days
+
+Group the remaining days by user
+average the vectors, take the modal class for labels
+
+Use scikit-learn SVC(kernel='linear'), all other params default
+
+Group the table by user
